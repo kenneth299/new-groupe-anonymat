@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe Anonymat - Expert Fiscal & Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- font awesone -->
+
+    <style>
+        /* Effet de flou sur la navigation au scroll (optionnel via JS) */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#f7fafa] font-sans antialiased">
+
+    <section
+        class="hero-carousel relative w-full h-96 flex flex-col bg-[#0a0f14] flex flex-col items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
+        <nav class="absolute top-0 left-0 w-full z-50 nav-glass">
+            <div class="lg:w-11/12 w-full mx-auto px-6 h-20 flex items-center justify-between">
+
+                <div class="flex items-center">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-12 w-auto object-contain" />
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-10 uppercase">
+                    <a href="index.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Accueil</a>
+                    <a href="about.html" class="text-white hover:text-[#00bdff] font-medium transition duration-300">À
+                        propos</a>
+                    <a href="#services"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Services</a>
+                    <a href="#faqs" class="text-white hover:text-[#00bdff] font-medium transition duration-300">FAQ</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Contactez-nous</a>
+                </div>
+
+                <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <button id="openMobileMenu"
+                        class="p-2 rounded-xl border-2 border-white/30 text-white hover:bg-white/10 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 text-center px-4 pt-24 pb-5 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <span
+                class="inline-block py-1 px-3 mb-4 text-xs font-bold tracking-widest text-[#00bdff] uppercase bg-[#00bdff]/10 border border-[#00bdff]/20 rounded-full">
+                Nous contacter
+            </span>
+
+            <h1 class="text-2xl md:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                Contactez-Nous
+            </h1>
+
+            <p class="text-lg text-white mb-5 max-w-2xl mx-auto leading-relaxed">
+                Nous sommes là pour répondre à vos questions et vous accompagner dans vos projets. N'hésitez pas à nous
+                contacter !
+            </p>
+        </div>
+    </section>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[100] invisible mt-20">
+        <div id="closeMobileMenu" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        </div>
+
+        <div id="menuContent"
+            class="overflow-y-auto absolute top-0 right-0 w-80 h-full bg-[#121212] p-8 shadow-2xl transition-transform translate-x-full">
+            <div class="flex justify-between items-center mb-12">
+                <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Logo" class="h-8 object-contain" />
+                <button id="btnExit" class="text-white p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-6 text-xl text-white">
+                <a href="index.html" class="hover:text-[#145bff] transition">Accueil</a>
+                <a href="about.html" class="hover:text-[#145bff] transition">À propos</a>
+                <a href="#services" class="hover:text-[#145bff] transition">Services</a>
+                <a href="#faqs" class="hover:text-[#145bff] transition">Réalisations</a>
+                <a href="contact.html" class="hover:text-[#145bff] transition">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+
+
+  <!-- SECTION CONTACT NETTOYÉE ET CHIC -->
+<section class="w-full flex items-center justify-center py-16 px-4 sm:px-10 bg-white">
+    <div class="w-full max-w-6xl flex flex-col lg:flex-row items-stretch gap-8 lg:gap-12 xl:gap-20">
+        
+        <!-- Colonne de gauche (Infos & Identité) -->
+        <div class="w-full lg:w-1/2 flex flex-col justify-center" data-aos="fade-right">
+            <span class="text-[#00bdff] font-bold tracking-widest uppercase text-sm mb-2">Contact</span>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900 leading-tight">
+                Discutons de vos <span class="text-[#00bdff]">projets</span>
+            </h1>
+            <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                Vous avez besoin d'une expertise fiscale, d'un conseil en communication ou d'un accompagnement stratégique ? 
+                Notre équipe est à votre écoute pour transformer vos défis en succès.
+            </p>
+
+            <!-- Coordonnées avec Icônes -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-[#00bdff]/10 flex items-center justify-center text-[#00bdff] group-hover:bg-[#00bdff] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold">Appelez-nous</p>
+                        <p class="text-gray-800 font-semibold text-lg">+229 00 00 00 00</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-full bg-[#00bdff]/10 flex items-center justify-center text-[#00bdff] group-hover:bg-[#00bdff] group-hover:text-white transition-all duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-widest text-gray-400 font-bold">Email</p>
+                        <p class="text-gray-800 font-semibold text-lg">contact@groupeanonymat.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Colonne de droite (Formulaire Premium) -->
+        <div class="w-full lg:w-1/2 bg-[#0a1118] p-8 sm:p-10 rounded-[2rem] shadow-2xl border border-white/5 relative overflow-hidden" data-aos="fade-left">
+            <!-- Décoration interne -->
+            <div class="absolute -top-24 -right-24 w-48 h-48 bg-[#00bdff] opacity-10 blur-[80px] rounded-full"></div>
+            
+            <h2 class="text-2xl font-bold text-white mb-2 relative z-10">Envoyez un message</h2>
+            <p class="text-gray-400 mb-8 relative z-10">Réponse garantie sous 24h.</p>
+
+            <form action="#" method="POST" class="space-y-5 relative z-10">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-[#00bdff] mb-2">Nom & Prénom</label>
+                    <input type="text" name="name" id="name" required
+                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-[#00bdff] focus:ring-1 focus:ring-[#00bdff] transition-all">
+                </div>
+
+                <div>
+                    <label for="motif" class="block text-sm font-medium text-[#00bdff] mb-2">Objet de la demande</label>
+                    <input type="text" name="motif" id="motif" placeholder="Ex: Expertise fiscale"
+                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-[#00bdff] focus:ring-1 focus:ring-[#00bdff] transition-all">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-[#00bdff] mb-2">Email professionnel</label>
+                        <input type="email" name="email" id="email" required
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-[#00bdff] focus:ring-1 focus:ring-[#00bdff] transition-all">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-[#00bdff] mb-2">Téléphone</label>
+                        <input type="tel" name="phone" id="phone"
+                            class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-[#00bdff] focus:ring-1 focus:ring-[#00bdff] transition-all">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="message" class="block text-sm font-medium text-[#00bdff] mb-2">Votre message</label>
+                    <textarea name="message" id="message" rows="4" required
+                        class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white outline-none focus:border-[#00bdff] focus:ring-1 focus:ring-[#00bdff] transition-all resize-none"></textarea>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-[#00bdff] text-[#0a1118] font-bold py-4 rounded-xl hover:bg-white hover:text-[#0a1118] transform hover:-translate-y-1 transition-all duration-300 shadow-lg shadow-[#00bdff]/20">
+                    Envoyer la demande
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full bg-[#0a0f14] text-gray-400 py-16 border-t border-white/5 mt-20">
+        <div class="w-11/12 lg:w-10/12 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+
+                <!-- Colonne 1 : Logo et Description -->
+                <div class="flex flex-col gap-6">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-10 w-auto object-contain self-start" />
+                    <p class="text-sm leading-relaxed max-w-xs">
+                        Expertise fiscale et stratégies de communication au service de votre croissance. Nous
+                        transformons vos défis en opportunités de performance.
+                    </p>
+                    <div class="flex items-center gap-4 text-white">
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : Navigation -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Entreprise</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li><a href="/about" class="hover:text-[#00bdff] transition-colors">À propos de nous</a></li>
+                        <li><a href="#services" class="hover:text-[#00bdff] transition-colors">Nos Pôles d'Expertise</a>
+                        </li>
+                        <li><a href="/faq" class="hover:text-[#00bdff] transition-colors">Questions fréquentes</a></li>
+                        <li><a href="#" class="hover:text-[#00bdff] transition-colors">Contacter</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Colonne 4 : Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Nous contacter</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-[#00bdff]"></i>
+                            <span>Siège social, Avenue des Experts, Ville</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-[#00bdff]"></i>
+                            <span>+229 01 00 00 00 00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-[#00bdff]"></i>
+                            <span>contact@groupeanonymat.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ligne de Copyright -->
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider">
+                <p>© 2024 Groupe Anonymat. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+    <script>
+        AOS.init({
+            once: true,  // L'animation se déclenche une seule fois
+            duration: 1000,  // Durée de l'animation en millisecondes
+            easing: 'ease-in-out',  // Le type d'animation (facultatif)
+        });
+    </script>
+
+</body>
+
+</html>

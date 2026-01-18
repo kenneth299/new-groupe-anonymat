@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Groupe Anonymat - Expert Fiscal & Communication</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <!-- font awesone -->
+
+    <style>
+        /* Effet de flou sur la navigation au scroll (optionnel via JS) */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+       html{
+            scroll-behavior: smooth;
+        }
+    </style>
+
+</head>
+
+<body class="bg-[#f7fafa] font-sans antialiased">
+
+    <section class="hero-carousel relative w-full h-96 flex bg-[#0a0f14] flex-col flex flex-col items-center justify-center overflow-hidden">
+
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
+        <nav class="absolute top-0 left-0 w-full z-50 nav-glass">
+            <div class="lg:w-11/12 w-full mx-auto px-6 h-20 flex items-center justify-between">
+
+                <div class="flex items-center">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-12 w-auto object-contain" />
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-10 uppercase">
+                    <a href="index.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Accueil</a>
+                    <a href="about.html" class="text-white hover:text-[#00bdff] font-medium transition duration-300">À
+                        propos</a>
+                    <a href="#services"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Services</a>
+                    <a href="#faqs" class="text-white hover:text-[#00bdff] font-medium transition duration-300">FAQ</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Contactez-nous</a>
+                </div>
+
+                <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
+                    <button id="openMobileMenu"
+                        class="p-2 rounded-xl border-2 border-white/30 text-white hover:bg-white/10 transition">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <div class="relative z-10 text-center px-4 pt-24 pb-5 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+            <span
+                class="inline-block py-1 px-3 mb-4 text-xs font-bold tracking-widest text-[#00bdff] uppercase bg-[#00bdff]/10 border border-[#00bdff]/20 rounded-full">
+                Qui sommes-nous ?
+            </span>
+
+            <h1 class="text-2xl md:text-5xl font-extrabold text-white mb-6 leading-tight tracking-tight">
+                A propos de Groupe Anonymat
+            </h1>
+
+            <p class="text-lg text-white mb-5 max-w-2xl mx-auto leading-relaxed">
+                Découvrez Groupe Anonymat, votre partenaire de confiance en expertise fiscale et communication.
+            </p>
+        </div>
+    </section>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="fixed inset-0 z-[100] invisible mt-20">
+        <div id="closeMobileMenu" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
+        </div>
+
+        <div id="menuContent"
+            class="overflow-y-auto absolute top-0 right-0 w-80 h-full bg-[#121212] p-8 shadow-2xl transition-transform translate-x-full">
+            <div class="flex justify-between items-center mb-12">
+                <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Logo" class="h-8 object-contain" />
+                <button id="btnExit" class="text-white p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="flex flex-col gap-6 text-xl text-white">
+                <a href="index.html" class="hover:text-[#145bff] transition">Accueil</a>
+                <a href="about.html" class="hover:text-[#145bff] transition">À propos</a>
+                <a href="#services" class="hover:text-[#145bff] transition">Services</a>
+                <a href="#faqs" class="hover:text-[#145bff] transition">Réalisations</a>
+                <a href="contact.html" class="hover:text-[#145bff] transition">Contact</a>
+            </nav>
+        </div>
+    </div>
+
+
+    <section class="py-16 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <h2 class="text-3xl font-bold text-black mb-6 relative before:absolute before:-left-6 before:top-2 before:w-4 before:h-8 before:bg-[#00bdff] before:rounded">
+                        Notre Histoire
+                    </h2>
+                    <p class="text-gray-800 mb-4">
+                        Fondée en 2023, Top Musique est née de la passion pour les rythmes africains et de la volonté de
+                        créer une plateforme 100% dédiée aux talents du continent.
+                    </p>
+                    <p class="text-gray-800">
+                        Ce qui a commencé comme un petit projet local est rapidement devenu la référence pour découvrir,
+                        streamer et télécharger les meilleures musiques africaines. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet est numquam ab similique rem doloremque, quidem optio hic quod tempore provident facilis nam maiores. Impedit quidem unde neque nobis ea?
+                    </p>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-full max-w-md">
+                        <div class="absolute -inset-4 bg-[#00bdff] rounded-xl rotate-6"></div>
+                        <img src="assets/hero/stylish-black-couple-have-business-conversation.jpg"
+                            alt="Équipe Top Musique" class="relative rounded-lg shadow-2xl w-full h-64 object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="w-full h-full flex items-center justify-center mt-20 flex-col overflow-hidden">
+        <div class="w-11/12 lg:w-10/12 items-center justify-center flex flex-col gap-10 py-10">
+            <div class="w-full items-center justify-center flex-col flex gap-8">
+                <div class="text-center max-w-4xl mx-auto px-4">
+                    <span
+                        class="text-sm text-white text-center font-semibold px-4 py-3 bg-[#00bdff] rounded-full capitalize">
+                        Nous avons tout prévu
+                    </span>
+                </div>
+                <div class="flex items-center justify-center flex-col gap-6">
+                    <div class="text-center mx-auto px-4">
+                        <h2 class="md:text-5xl text-3xl font-medium text-gray-900">
+                            Questions Fréquementes Posées
+                        </h2>
+                    </div>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-base lg:text-base text-center">
+                        Même sans compétences techniques, vous pouvez lancer votre boutique mobile professionnelle et
+                        commencer à générer des ventes en moins d'une heure. Voici comment faire:
+                    </p>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 gap-10">
+
+                <div
+                    class="w-full p-5 border-b border-[#00bdff]/30 flex flex-col md:flex-row gap-6 md:gap-10 md:items-center md:justify-between">
+
+                    <div class="w-full md:w-2/5 flex items-start md:items-center gap-4" data-aos="fade-right"
+                        data-aos-offset="100">
+                        <i class="fa-regular fa-circle-question text-[#00bdff] text-base mt-1 md:mt-0"></i>
+                        <h2 class="text-[#00bdff] font-bold text-lg">
+                            Quels services proposez-vous ?
+                        </h2>
+                    </div>
+
+                    <div class="w-full md:w-3/5" data-aos="fade-left" data-aos-offset="100">
+                        <p class="text-base">
+                            Nous offrons des services de branding, création de contenus, gestion des réseaux sociaux,
+                            publicité digitale, conception de sites web et stratégies marketing adaptées à votre
+                            entreprise.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full p-5 border-b border-[#00bdff]/30 flex flex-col md:flex-row gap-6 md:gap-10 md:items-center md:justify-between">
+
+                    <div class="w-full md:w-2/5 flex items-start md:items-center gap-4" data-aos="fade-right"
+                        data-aos-offset="100">
+                        <i class="fa-regular fa-circle-question text-[#00bdff] text-base mt-1 md:mt-0"></i>
+                        <h2 class="text-[#00bdff] font-bold text-lg">
+                            Quels services proposez-vous ?
+                        </h2>
+                    </div>
+
+                    <div class="w-full md:w-3/5" data-aos="fade-left" data-aos-offset="100">
+                        <p class="text-base">
+                            Nous offrons des services de branding, création de contenus, gestion des réseaux sociaux,
+                            publicité digitale, conception de sites web et stratégies marketing adaptées à votre
+                            entreprise.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full p-5 border-b border-[#00bdff]/30 flex flex-col md:flex-row gap-6 md:gap-10 md:items-center md:justify-between">
+
+                    <div class="w-full md:w-2/5 flex items-start md:items-center gap-4" data-aos="fade-right"
+                        data-aos-offset="100">
+                        <i class="fa-regular fa-circle-question text-[#00bdff] text-base mt-1 md:mt-0"></i>
+                        <h2 class="text-[#00bdff] font-bold text-lg">
+                            Quels services proposez-vous ?
+                        </h2>
+                    </div>
+
+                    <div class="w-full md:w-3/5" data-aos="fade-left" data-aos-offset="100">
+                        <p class="text-base">
+                            Nous offrons des services de branding, création de contenus, gestion des réseaux sociaux,
+                            publicité digitale, conception de sites web et stratégies marketing adaptées à votre
+                            entreprise.
+                        </p>
+                    </div>
+                </div>
+
+                <div
+                    class="w-full p-5 border-b border-[#00bdff]/30 flex flex-col md:flex-row gap-6 md:gap-10 md:items-center md:justify-between">
+
+                    <div class="w-full md:w-2/5 flex items-start md:items-center gap-4" data-aos="fade-right"
+                        data-aos-offset="100">
+                        <i class="fa-regular fa-circle-question text-[#00bdff] text-base mt-1 md:mt-0"></i>
+                        <h2 class="text-[#00bdff] font-bold text-lg">
+                            Quels services proposez-vous ?
+                        </h2>
+                    </div>
+
+                    <div class="w-full md:w-3/5" data-aos="fade-left" data-aos-offset="100">
+                        <p class="text-base">
+                            Nous offrons des services de branding, création de contenus, gestion des réseaux sociaux,
+                            publicité digitale, conception de sites web et stratégies marketing adaptées à votre
+                            entreprise.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-7xl mx-auto mt-20">
+        <div
+            class="relative overflow-hidden bg-[#001a2c] rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl">
+
+            <!-- Cercles décoratifs d'arrière-plan (Blobs) -->
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-[#00bdff] opacity-20 blur-[80px] rounded-full"></div>
+            <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-blue-600 opacity-20 blur-[100px] rounded-full"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- Surtitre optionnel -->
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-[#00bdff] uppercase bg-blue-500/10 rounded-full">
+                    Prêt à décoller ?
+                </span>
+
+                <!-- Titre Principal (H1) -->
+                <h1 class="max-w-7xl text-2xl md:text-4xl font-extrabold text-white leading-[1.1] mb-6">
+                    Propulsez votre projet vers de <span class="text-[#00bdff]">nouveaux sommets.</span>
+                </h1>
+
+                <!-- Paragraphe (P) -->
+                <p class="max-w-2xl text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                    Rejoignez des centaines d'entreprises qui ont déjà transformé leur communication digitale avec nos
+                    stratégies d'impact.
+                </p>
+
+                <!-- Bouton d'action -->
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <a href="#"
+                        class="btn-glow group relative inline-flex items-center justify-center px-5 py-3 font-bold text-white bg-[#00bdff] rounded-md transition-all duration-300 hover:scale-105 active:scale-95">
+                        Démarrer mon projet
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Texture discrète -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                    style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+            </div>
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full bg-[#0a0f14] text-gray-400 py-16 border-t border-white/5 mt-20">
+        <div class="w-11/12 lg:w-10/12 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+
+                <!-- Colonne 1 : Logo et Description -->
+                <div class="flex flex-col gap-6">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-10 w-auto object-contain self-start" />
+                    <p class="text-sm leading-relaxed max-w-xs">
+                        Expertise fiscale et stratégies de communication au service de votre croissance. Nous
+                        transformons vos défis en opportunités de performance.
+                    </p>
+                    <div class="flex items-center gap-4 text-white">
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : Navigation -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Entreprise</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li><a href="/about" class="hover:text-[#00bdff] transition-colors">À propos de nous</a></li>
+                        <li><a href="#services" class="hover:text-[#00bdff] transition-colors">Nos Pôles d'Expertise</a>
+                        </li>
+                        <li><a href="/faq" class="hover:text-[#00bdff] transition-colors">Questions fréquentes</a></li>
+                        <li><a href="#" class="hover:text-[#00bdff] transition-colors">Contacter</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Colonne 4 : Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Nous contacter</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-[#00bdff]"></i>
+                            <span>Siège social, Avenue des Experts, Ville</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-[#00bdff]"></i>
+                            <span>+229 01 00 00 00 00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-[#00bdff]"></i>
+                            <span>contact@groupeanonymat.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ligne de Copyright -->
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider">
+                <p>© 2024 Groupe Anonymat. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+    <script>
+        AOS.init({
+            once: true,  // L'animation se déclenche une seule fois
+            duration: 1000,  // Durée de l'animation en millisecondes
+            easing: 'ease-in-out',  // Le type d'animation (facultatif)
+        });
+    </script>
+
+</body>
+
+</html>

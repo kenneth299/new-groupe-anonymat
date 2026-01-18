@@ -62,34 +62,38 @@
         h6 {
             font-family: 'Poppins', sans-serif;
         }
+
+        html{
+            scroll-behavior: smooth;
+        }
     </style>
 
 </head>
 
-<body class="bg-gray-100 font-sans antialiased">
+<body class="bg-[#f7fafa] font-sans antialiased">
 
     <section
-        class="hero-carousel relative w-full min-h-screen flex flex-col bg-cover bg-center flex flex-col items-center justify-center overflow-hidden">
+        class="hero-carousel relative w-full h-screen flex flex-col bg-cover bg-center flex flex-col items-center justify-center overflow-hidden">
 
         <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/40 to-black/80"></div>
         <nav class="absolute top-0 left-0 w-full z-50 nav-glass">
-            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="lg:w-11/12 w-full mx-auto px-6 h-20 flex items-center justify-between">
 
                 <div class="flex items-center">
                     <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
-                        class="h-12 w-auto object-contain hover:scale-105 transition-transform duration-300" />
+                        class="h-12 w-auto object-contain" />
                 </div>
 
                 <div class="hidden lg:flex items-center space-x-10 uppercase">
-                    <a href="/" class="text-white hover:text-[#00bdff] font-medium transition duration-300">Accueil</a>
-                    <a href="/about" class="text-gray-300 hover:text-[#00bdff] font-medium transition duration-300">À
+                    <a href="index.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Accueil</a>
+                    <a href="about.html" class="text-white hover:text-[#00bdff] font-medium transition duration-300">À
                         propos</a>
-                    <a href="/solutions"
-                        class="text-gray-300 hover:text-[#00bdff] font-medium transition duration-300">Services</a>
-                    <a href="/faq"
-                        class="text-gray-300 hover:text-[#00bdff] font-medium transition duration-300">FAQ</a>
-                    <a href="/faq"
-                        class="text-gray-300 hover:text-[#00bdff] font-medium transition duration-300">Contactez-nous</a>
+                    <a href="#services"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Services</a>
+                    <a href="#faqs" class="text-white hover:text-[#00bdff] font-medium transition duration-300">FAQ</a>
+                    <a href="contact.html"
+                        class="text-white hover:text-[#00bdff] font-medium transition duration-300">Contactez-nous</a>
                 </div>
 
                 <div class="xl:hidden flex w-auto text-end h-full flex justify-end items-center gap-5">
@@ -105,7 +109,7 @@
             </div>
         </nav>
 
-        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto pt-20">
             <span
                 class="inline-block py-1 px-3 mb-4 text-xs font-bold tracking-widest text-[#00bdff] uppercase bg-[#00bdff]/10 border border-[#00bdff]/20 rounded-full">
                 Expertise & Performance
@@ -122,11 +126,11 @@
 
             <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a href="/contact"
-                    class="w-full sm:w-auto px-5 py-2 rounded-full bg-[#00bdff] text-white font-bold text-lg shadow-lg shadow-[#00bdff]/30 hover:shadow-[#00bdff]/50 hover:-translate-y-1 transition-all duration-300">
+                    class="w-full sm:w-auto px-5 py-2 rounded-md bg-[#00bdff] text-white font-bold text-lg shadow-lg shadow-[#00bdff]/30 hover:shadow-[#00bdff]/50 hover:-translate-y-1 transition-all duration-300">
                     Parler à un expert
                 </a>
                 <a href="/solutions"
-                    class="w-full sm:w-auto px-5 py-2 rounded-full border border-white/30 text-white backdrop-blur-sm font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
+                    class="w-full sm:w-auto px-5 py-2 rounded-md border border-white/30 text-white backdrop-blur-sm font-bold text-lg hover:bg-white hover:text-black transition-all duration-300">
                     Nos pôles d'expertise
                 </a>
             </div>
@@ -134,7 +138,7 @@
     </section>
 
     <!-- mobile menu -->
-    <div id="mobileMenu" class="fixed inset-0 z-[100] invisible">
+    <div id="mobileMenu" class="fixed inset-0 z-[100] invisible mt-20">
         <div id="closeMobileMenu" class="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity opacity-0">
         </div>
 
@@ -154,12 +158,32 @@
             <nav class="flex flex-col gap-6 text-xl text-white">
                 <a href="index.html" class="hover:text-[#145bff] transition">Accueil</a>
                 <a href="about.html" class="hover:text-[#145bff] transition">À propos</a>
-                <a href="services.html" class="hover:text-[#145bff] transition">Services</a>
-                <a href="#" class="hover:text-[#145bff] transition">Réalisations</a>
-                <a href="#" class="hover:text-[#145bff] transition">Contact</a>
+                <a href="#services" class="hover:text-[#145bff] transition">Services</a>
+                <a href="#faqs" class="hover:text-[#145bff] transition">Réalisations</a>
+                <a href="contact.html" class="hover:text-[#145bff] transition">Contact</a>
             </nav>
         </div>
     </div>
+
+    <section class="w-full py-12 bg-white border-b border-gray-100">
+        <div class="w-11/12 mx-auto text-center">
+            <p class="text-xl font-semibold text-black uppercase tracking-widest mb-8">Ils nous font confiance</p>
+            <div
+                class="flex flex-wrap items-center justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+                <!-- Remplace par tes vrais logos -->
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Partner"
+                    class="h-8 w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Partner"
+                    class="h-8 w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Partner"
+                    class="h-8 w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="Partner"
+                    class="h-8 w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg" alt="Partner"
+                    class="h-8 w-auto">
+            </div>
+        </div>
+    </section>
 
     <section class="w-full h-auto flex items-center justify-center mt-20">
         <div class="w-11/12 md:w-10/12 h-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
@@ -176,17 +200,17 @@
                     Bienvenue chez Groupe Anonymat. Nous mettons notre expertise en communication digitale
                     au service de votre réussite, en vous proposant des stratégies innovantes et adaptées à vos besoins.
                 </p>
-                <button class="mt-5 lg:mt-10 w-52 text-white font-semibold h-12 bg-[#00bdff] rounded-full">En savoir
+                <button class="mt-5 lg:mt-10 w-52 text-white font-semibold h-12 bg-[#00bdff] rounded-md">En savoir
                     plus <i class="fa-solid fa-arrow-right"></i></button>
             </div>
             <div class="w-full h-full flex items-center justify-center">
-                <img src="./assets/pictures/freepik__a-diverse-group-of-six-professionals-stand-in-a-br__22645.jpeg"
-                    alt="" class="object-cover w-full h-full">
+                <img src="./assets/hero/freepik__a-diverse-group-of-six-professionals-stand-in-a-br__22645.jpeg" alt=""
+                    class="object-cover w-full h-full">
             </div>
         </div>
     </section>
 
-    <section class="w-full h-auto flex items-center justify-center mt-32 flex-col">
+    <section id="services" class="w-full h-auto flex items-center justify-center mt-16 lg:mt-32 flex-col">
         <div class="w-11/12 lg:w-10/12 items-center justify-center flex flex-col gap-10 py-10">
             <div class="w-full items-center justify-center flex-col flex gap-8">
                 <div class="text-center max-w-4xl mx-auto px-4">
@@ -207,92 +231,220 @@
                     </p>
                 </div>
             </div>
-            <div
-                class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-10 gap-y-10 mt-20 auto-rows-auto items-start">
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+            <div class="grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5 gap-y-10 mt-16 auto-rows-auto items-start">
+
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-bullhorn text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="12" y1="1" x2="12" y2="23"></line>
+                            <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Communication</h1>
-                    <p class="mt-3 text-center text-base text-black"> Des stratégies claires et efficaces pour booster
-                        votre
-                        visibilité.
-                        Communiquez mieux, atteignez plus de monde.
-                        Faites entendre votre voix avec impact !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Collecte de Taxes et Redevances
+                    </h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous gérons la collecte des taxes municipales pour les collectivités locales, assurant un
+                        processus efficace et transparent.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
 
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-graduation-cap text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Formation</h1>
-                    <p class="mt-3 text-center text-base text-black"> Apprenez le design graphique et la maintenance
-                        informatique.
-                        Des formations pratiques et adaptées à vos besoins.
-                        Développez vos compétences dès maintenant !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Conseil en Fiscalité Locale</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous vous accompagnons dans l’optimisation de vos recettes fiscales et le respect des
+                        obligations fiscales locales.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
 
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-envelope text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="16" y1="2" x2="16" y2="6"></line>
+                            <line x1="8" y1="2" x2="8" y2="6"></line>
+                            <line x1="3" y1="10" x2="21" y2="10"></line>
+                            <path d="M12 14l1 2 2 1-2 1-1 2-1-2-2-1 2-1z"></path>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Livraison de courier</h1>
-                    <p class="mt-3 text-center text-base text-black">Un service rapide et sécurisé pour vos envois.
-                        Nous acheminons vos courriers en toute confiance.
-                        Livraison fiable, où que vous soyez !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Organisation d'Événements</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        De l’idée à la réalisation, nous organisons vos événements (séminaires, conférences, etc.) en
+                        garantissant leur succès.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
 
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-calendar-alt text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Evenementiel</h1>
-                    <p class="mt-3 text-center text-base text-black">Création d'événements sur mesure pour marquer les
-                        esprits.
-                        Organisation professionnelle pour des moments inoubliables.
-                        Faites de chaque événement un succès exceptionnel !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Stratégies de Communication</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous élaborons des stratégies de communication globales pour renforcer votre image et maximiser
+                        votre visibilité.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
 
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-calendar-alt text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20h9"></path>
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Evenementiel</h1>
-                    <p class="mt-3 text-center text-base text-black">Création d'événements sur mesure pour marquer les
-                        esprits.
-                        Organisation professionnelle pour des moments inoubliables.
-                        Faites de chaque événement un succès exceptionnel !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Création de Contenus</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        De la création de sites web à la gestion des réseaux sociaux, nous produisons des contenus
+                        attractifs et pertinents.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
 
-                <div class="w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center"
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
                     data-aos="fade-up">
-                    <div class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full">
-                        <i class="fa fa-calendar-alt text-xl text-white"></i>
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 15h2a2 2 0 1 0 0-4h-2v4Z"></path>
+                            <path d="m11 19 3 3 3-3"></path>
+                            <path d="M5 18v2a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"></path>
+                            <path d="M3 12h18"></path>
+                            <path d="M3 8h18"></path>
+                            <path d="M4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2"></path>
+                        </svg>
                     </div>
-                    <h1 class="mt-5 font-semibold text-2xl text-[#00bdff]">Evenementiel</h1>
-                    <p class="mt-3 text-center text-base text-black">Création d'événements sur mesure pour marquer les
-                        esprits.
-                        Organisation professionnelle pour des moments inoubliables.
-                        Faites de chaque événement un succès exceptionnel !</p>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Publicité</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous gérons vos campagnes publicitaires (en ligne et hors ligne) pour accroître votre visibilité
+                        et générer des résultats.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
                 </div>
+
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z">
+                            </path>
+                            <circle cx="12" cy="13" r="2"></circle>
+                            <path d="M12 10v1"></path>
+                            <path d="M12 15v1"></path>
+                            <path d="m14.6 11.5-.87.5"></path>
+                            <path d="m10.27 14-.87.5"></path>
+                            <path d="m14.6 14.5-.87-.5"></path>
+                            <path d="m10.27 12-.87-.5"></path>
+                        </svg>
+                    </div>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Assistance Administrative</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous vous offrons une gestion administrative complète pour simplifier vos processus quotidiens
+                        et améliorer votre productivité.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
+                </div>
+
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M22 10v4h-2.29"></path>
+                            <path d="m22 10-3-3-3 3"></path>
+                        </svg>
+                    </div>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Formations et Coaching
+                        Professionnel</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nos formations sur mesure vous permettent de renforcer les compétences de vos équipes et
+                        d’optimiser vos performances.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
+                </div>
+
+                <div class="group relative w-full border border-black/10 rounded-md min-h-auto p-8 bg-white relative flex justify-center flex-col items-center  transition-all duration-500 ease-out hover:-translate-y-2 hover:shadow-2xl hover:border-[#00bdff]/20"
+                    data-aos="fade-up">
+                    <div
+                        class="absolute -top-8 w-16 h-16 flex items-center justify-center bg-[#00bdff] rounded-full shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:rotate-12">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 0 1-8 0"></path>
+                        </svg>
+                    </div>
+                    <h1 class="mt-5 font-semibold text-2xl text-center text-[#00bdff]">Commerce Général et Services
+                        Divers</h1>
+                    <p class="mt-3 text-center text-base text-gray-600">
+                        Nous proposons des produits et services variés, allant des fournitures de bureau au conseil sur
+                        des projets spécifiques.
+                    </p>
+                    <div
+                        class="absolute bottom-0 h-1 w-0 bg-[#00bdff] transition-all duration-500 group-hover:w-full rounded-b-2xl">
+                    </div>
+                </div>
+
             </div>
 
-            <div class="w-full h-auto items-center justify-center flex">
-                <button class="w-auto text-gray-800 rounded-lg text-lg hover:underline">
-                    Voir plus de services
-                    <!-- icon flex lever vers le haut coucher en peu a droite -->
-                    <i class="fa-solid fa-arrow-up ml-2"></i>
-                </button>
-            </div>
         </div>
     </section>
 
-    <section class="w-full h-full flex items-center justify-center mt-20 flex-col">
+    <section id="faqs" class="w-full h-full flex items-center justify-center mt-20 flex-col overflow-hidden">
         <div class="w-11/12 lg:w-10/12 items-center justify-center flex flex-col gap-10 py-10">
             <div class="w-full items-center justify-center flex-col flex gap-8">
                 <div class="text-center max-w-4xl mx-auto px-4">
@@ -313,7 +465,7 @@
                     </p>
                 </div>
             </div>
-            <div class="mt-12 grid grid-cols-1 gap-10">
+            <div class="mt-8 grid grid-cols-1 gap-10">
 
                 <div
                     class="w-full p-5 border-b border-[#00bdff]/30 flex flex-col md:flex-row gap-6 md:gap-10 md:items-center md:justify-between">
@@ -398,6 +550,121 @@
             </div>
         </div>
     </section>
+
+    <section class="max-w-7xl mx-auto mt-20">
+        <div
+            class="relative overflow-hidden bg-[#001a2c] rounded-[2rem] md:rounded-[3rem] p-8 md:p-16 text-center shadow-2xl">
+
+            <!-- Cercles décoratifs d'arrière-plan (Blobs) -->
+            <div class="absolute -top-24 -left-24 w-64 h-64 bg-[#00bdff] opacity-20 blur-[80px] rounded-full"></div>
+            <div class="absolute -bottom-24 -right-24 w-80 h-80 bg-blue-600 opacity-20 blur-[100px] rounded-full"></div>
+
+            <div class="relative z-10 flex flex-col items-center">
+                <!-- Surtitre optionnel -->
+                <span
+                    class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-[#00bdff] uppercase bg-blue-500/10 rounded-full">
+                    Prêt à décoller ?
+                </span>
+
+                <!-- Titre Principal (H1) -->
+                <h1 class="max-w-7xl text-2xl md:text-4xl font-extrabold text-white leading-[1.1] mb-6">
+                    Propulsez votre projet vers de <span class="text-[#00bdff]">nouveaux sommets.</span>
+                </h1>
+
+                <!-- Paragraphe (P) -->
+                <p class="max-w-2xl text-lg md:text-xl text-gray-300 mb-10 leading-relaxed">
+                    Rejoignez des centaines d'entreprises qui ont déjà transformé leur communication digitale avec nos
+                    stratégies d'impact.
+                </p>
+
+                <!-- Bouton d'action -->
+                <div class="flex flex-col sm:flex-row gap-4 items-center">
+                    <a href="#"
+                        class="btn-glow group relative inline-flex items-center justify-center px-5 py-3 font-bold text-white bg-[#00bdff] rounded-md transition-all duration-300 hover:scale-105 active:scale-95">
+                        Démarrer mon projet
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                            class="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Texture discrète -->
+                <div class="absolute inset-0 opacity-[0.03] pointer-events-none"
+                    style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+            </div>
+    </section>
+
+
+    <!-- FOOTER SECTION -->
+    <footer class="w-full bg-[#0a0f14] text-gray-400 py-16 border-t border-white/5 mt-20">
+        <div class="w-11/12 lg:w-10/12 mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mb-16">
+
+                <!-- Colonne 1 : Logo et Description -->
+                <div class="flex flex-col gap-6">
+                    <img src="./assets/logo/gan-removebg-preview-4.webp" alt="Groupe Anonymat"
+                        class="h-10 w-auto object-contain self-start" />
+                    <p class="text-sm leading-relaxed max-w-xs">
+                        Expertise fiscale et stratégies de communication au service de votre croissance. Nous
+                        transformons vos défis en opportunités de performance.
+                    </p>
+                    <div class="flex items-center gap-4 text-white">
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="hover:text-[#00bdff] transition-colors"><i
+                                class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : Navigation -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Entreprise</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li><a href="/about" class="hover:text-[#00bdff] transition-colors">À propos de nous</a></li>
+                        <li><a href="#services" class="hover:text-[#00bdff] transition-colors">Nos Pôles d'Expertise</a>
+                        </li>
+                        <li><a href="/faq" class="hover:text-[#00bdff] transition-colors">Questions fréquentes</a></li>
+                        <li><a href="#" class="hover:text-[#00bdff] transition-colors">Contacter</a></li>
+                    </ul>
+                </div>
+
+
+                <!-- Colonne 4 : Contact -->
+                <div>
+                    <h4 class="text-white font-bold mb-6">Nous contacter</h4>
+                    <ul class="flex flex-col gap-4 text-sm">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-location-dot text-[#00bdff]"></i>
+                            <span>Siège social, Avenue des Experts, Ville</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-[#00bdff]"></i>
+                            <span>+229 01 00 00 00 00</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-[#00bdff]"></i>
+                            <span>contact@groupeanonymat.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Ligne de Copyright -->
+            <div
+                class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-xs tracking-wider">
+                <p>© 2024 Groupe Anonymat. Tous droits réservés.</p>
+                <div class="flex gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Mentions Légales</a>
+                    <a href="#" class="hover:text-white transition-colors">Politique de Confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <script src="./script.js" defer></script>
     <script>
